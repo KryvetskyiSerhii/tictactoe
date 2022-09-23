@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Tic-Tac-Toe</h1>
+  <div class="field">
+    <p>Start the game</p>
+  </div>
+  <div class="field">
+    <button
+      mat-raised-button
+      color="accent"
+      class="start__game-button"
+      (click)="startGame()"
+    >
+      Start
+    </button>
+  </div>
+  <div class="gameboard">
+    <div class="players one">Player 1</div>
+    <div class="gamefield">
+      <div class="row">
+        <div (click)="clickSubField($event)" position="0" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="1" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="2" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div (click)="clickSubField($event)" position="3" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="4" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="5" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div (click)="clickSubField($event)" position="6" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="7" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+        <div (click)="clickSubField($event)" position="8" class="item">
+          <img src="../../assets/cross.svg" class="item__img" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="players two">Player 2</div>
+  </div>
+</div>

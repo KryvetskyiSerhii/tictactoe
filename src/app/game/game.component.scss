@@ -1,0 +1,55 @@
+h1 {
+  font-weight: 900;
+  text-align: center;
+  margin: 20px;
+}
+
+.field {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.gameboard {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.gamefield {
+  width: 50vw;
+  margin: 50px auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  width: 33.333333333333%;
+  border: 2px solid #fff;
+  height: 150px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 50%;
+  }
+  &__img {
+    visibility: hidden;
+  }
+}
+.active {
+  visibility: visible;
+}
+.one {
+  color: red;
+}
+
+.two {
+  color: green;
+}
