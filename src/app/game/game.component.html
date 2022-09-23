@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Tic-Tac-Toe</h1>
   <div class="field">
-    <p>Start the game</p>
+    <p class="current-turn">Start the game</p>
   </div>
   <div class="field">
     <button
@@ -9,45 +9,29 @@
       color="accent"
       class="start__game-button"
       (click)="startGame()"
+      *ngIf="this.game.gameStatus === 0"
     >
       Start
     </button>
   </div>
-  <div class="gameboard">
+  <div *ngIf="this.game.gameStatus === 1" class="gameboard">
     <div class="players one">Player 1</div>
     <div class="gamefield">
       <div class="row">
-        <div (click)="clickSubField($event)" position="0" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="1" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="2" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
+        <div (click)="clickSubField($event)" position="0" class="item"></div>
+
+        <div (click)="clickSubField($event)" position="1" class="item"></div>
+        <div (click)="clickSubField($event)" position="2" class="item"></div>
       </div>
       <div class="row">
-        <div (click)="clickSubField($event)" position="3" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="4" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="5" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
+        <div (click)="clickSubField($event)" position="3" class="item"></div>
+        <div (click)="clickSubField($event)" position="4" class="item"></div>
+        <div (click)="clickSubField($event)" position="5" class="item"></div>
       </div>
       <div class="row">
-        <div (click)="clickSubField($event)" position="6" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="7" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
-        <div (click)="clickSubField($event)" position="8" class="item">
-          <img src="../../assets/cross.svg" class="item__img" alt="" />
-        </div>
+        <div (click)="clickSubField($event)" position="6" class="item"></div>
+        <div (click)="clickSubField($event)" position="7" class="item"></div>
+        <div (click)="clickSubField($event)" position="8" class="item"></div>
       </div>
     </div>
     <div class="players two">Player 2</div>
